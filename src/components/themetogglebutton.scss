@@ -1,0 +1,24 @@
+.toggleButton {
+    display: flex;
+    padding: .4rem;
+    border-radius: 5rem;
+    gap: .2rem;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        font-size: x-large;
+        cursor: pointer;
+    }
+    &.light {
+        background-color: #c0c0c0;
+    }
+    &.dark {
+        background-color: #c0c0c0;
+    }
+}

@@ -1,6 +1,7 @@
 import './navbar.scss'
 
 import { Link } from "react-router-dom"
+import ThemeToggleButton from './ThemeToggleButton'
 
 export default function NavBar() {
 
@@ -32,5 +33,6 @@ export default function NavBar() {
                 )
             }
         </ul>
+        <ThemeToggleButton />
     </nav>)
 }

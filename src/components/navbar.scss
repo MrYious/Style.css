@@ -6,9 +6,13 @@ $dark-primary-color: #E5F143;
 
 .navbar {
     display: flex;
-    justify-content:space-between;
     align-items: center;
     padding: $main-padding;
+    gap: 25px;
+
+    h1 {
+        flex-grow: 1;
+    }
 
     .filetype {
         color: $light-primary-color;

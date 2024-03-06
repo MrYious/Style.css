@@ -1,4 +1,7 @@
 import App from "./App";
+import Flex from "./Pages/Flex";
+import Grid from "./Pages/Grid";
+import Home from "./Pages/Home";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -8,15 +11,15 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: 'Home'
+                element: <Home />
             },
             {
                 path: 'flex',
-                element: 'Flex'
+                element: <Flex />
             },
             {
                 path: 'grid',
-                element: 'Grid'
+                element: <Grid />
             }
         ]
     }

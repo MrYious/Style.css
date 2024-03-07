@@ -1,21 +1,13 @@
-$main-padding: 0px 5%;
-
-$dark-bg: rgb(90, 90, 90);
-$light-primary-color: #00bd00;
-$dark-primary-color: #E5F143;
+@use './base';
 
 .navbar {
     display: flex;
     align-items: center;
-    padding: $main-padding;
+    padding: base.$main-padding;
     gap: 25px;
 
     h1 {
         flex-grow: 1;
-    }
-
-    .filetype {
-        color: $light-primary-color;
     }
 
     ul {
@@ -24,16 +16,45 @@ $dark-primary-color: #E5F143;
         gap: 1rem;
     }
 
-    li {
-        :hover {
-            color: $light-primary-color;
-        }
-    }
-
     a {
         text-decoration: none;
         padding: 0.5rem 0.5rem;
         font-size: 1.1rem;
-        color: black;
+    }
+
+    &.light {
+        @include base.lightTheme();
+
+        .filetype {
+            color: base.$light-primary-color;
+        }
+
+        a {
+            color: base.$light-neutral-color;
+        }
+
+        li {
+            :hover {
+                color: base.$light-primary-color;
+            }
+        }
+    }
+
+    &.dark {
+        @include base.darkTheme();
+
+        .filetype {
+            color: base.$dark-primary-color
+        }
+
+        a {
+            color: base.$dark-neutral-color;
+        }
+
+        li {
+            :hover {
+                color: base.$dark-primary-color;
+            }
+        }
     }
 }

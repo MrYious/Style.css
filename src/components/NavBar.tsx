@@ -2,8 +2,11 @@ import './navbar.scss'
 
 import { Link } from "react-router-dom"
 import ThemeToggleButton from './ThemeToggleButton'
+import { useAppSelector } from '../hooks/useReduxHooks'
 
 export default function NavBar() {
+
+    const theme = useAppSelector(state => state.theme.theme)
 
     const links = [
         {
@@ -20,7 +23,7 @@ export default function NavBar() {
         },
     ]
 
-    return(<nav className="navbar">
+    return(<nav className={`navbar ${theme}`}>
         <h1>
             Style<span className="filetype">.CSS</span>
         </h1>

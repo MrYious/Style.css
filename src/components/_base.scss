@@ -1,0 +1,20 @@
+$main-padding: 0px 5%;
+
+$light-bg: #fafafa;
+$dark-bg: #5a5a5a;
+
+$light-neutral-color: black;
+$dark-neutral-color: white;
+
+$light-primary-color: #00bd00;
+$dark-primary-color: #E5F143;
+
+@mixin lightTheme($color: $light-neutral-color){
+    background-color: $light-bg;
+    color: $color;
+}
+
+@mixin darkTheme($color: $dark-neutral-color){
+    background-color: $dark-bg;
+    color: $color;
+}

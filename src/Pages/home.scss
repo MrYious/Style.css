@@ -40,12 +40,13 @@ main {
         }
 
         a {
-            color: base.$light-primary-color;
-            background-color: base.$light-bg;
+            background-color: base.$light-primary-color;
+            color: base.$light-bg;
+            border-color: base.$light-primary-color;
 
             &:hover {
-                background-color: base.$light-primary-color;
-                color: base.$light-bg;
+                color: base.$light-primary-color;
+                background-color: base.$light-bg;
             }
         }
     }
@@ -57,12 +58,13 @@ main {
         }
 
         a {
-            color: base.$dark-primary-color;
-            background-color: base.$dark-bg;
+            background-color: base.$dark-primary-color;
+            color: base.$dark-bg;
+            border-color: base.$dark-primary-color;
 
             &:hover {
-                background-color: base.$dark-primary-color;
-                color: base.$dark-bg;
+                color: base.$dark-primary-color;
+                background-color: base.$dark-bg;
             }
         }
     }

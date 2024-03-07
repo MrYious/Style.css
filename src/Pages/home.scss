@@ -68,5 +68,70 @@ main {
             }
         }
     }
+}
 
+div#collection {
+    display: flex;
+    min-height: 100vh;
+    padding: base.$main-padding;
+    justify-content: start;
+    align-items: start;
+    padding-top: 5%;
+    box-sizing: border-box;
+
+    aside{
+        position: sticky;
+        top: 10%;
+        width: 20%;
+        padding: 1rem 0;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: .2rem 1rem;
+        }
+    }
+
+    div {
+        // border-left: 2px solid black;
+        flex-grow: 1;
+    }
+
+    &.light {
+        @include base.light-theme();
+
+        aside {
+
+            a {
+                color: base.$light-neutral-color;
+                border-left: 4px solid darken(base.$light-bg, $amount: 10%);
+
+                &:hover {
+                    color: base.$light-primary-color;
+                    border-left: 4px solid base.$light-primary-color;
+                }
+            }
+        }
+    }
+    &.dark {
+        @include base.dark-theme();
+
+        aside {
+
+            a {
+                color: base.$dark-neutral-color;
+                border-left: 4px solid lighten(base.$dark-bg, $amount: 20%);
+
+                &:hover {
+                    color: base.$dark-primary-color;
+                    border-left: 4px solid base.$dark-primary-color;
+                }
+            }
+        }
+    }
 }

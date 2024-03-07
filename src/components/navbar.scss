@@ -8,6 +8,7 @@
     padding: base.$main-padding;
     gap: 25px;
     box-sizing: border-box;
+    z-index: 1000;
 
     h1 {
         flex-grow: 1;

@@ -1,6 +1,6 @@
 import './home.scss'
 
-import ComponentTemplate from '../components/ComponentTemplate';
+import Component from '../components/content/Component';
 import { FaAnglesDown } from "react-icons/fa6";
 import { useAppSelector } from '../hooks/useReduxHooks'
 
@@ -45,8 +45,8 @@ export default function Home() {
           </ul>
         </aside>
         <div>
-          <ComponentTemplate />
-          <ComponentTemplate />
+          <Component />
+          <Component />
         </div>
       </div>
     </>

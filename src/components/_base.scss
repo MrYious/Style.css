@@ -9,12 +9,12 @@ $dark-neutral-color: white;
 $light-primary-color: #00bd00;
 $dark-primary-color: #E5F143;
 
-@mixin lightTheme($color: $light-neutral-color){
+@mixin light-theme($color: $light-neutral-color){
     background-color: $light-bg;
     color: $color;
 }
 
-@mixin darkTheme($color: $dark-neutral-color){
+@mixin dark-theme($color: $dark-neutral-color){
     background-color: $dark-bg;
     color: $color;
 }

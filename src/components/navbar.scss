@@ -23,7 +23,7 @@
     }
 
     &.light {
-        @include base.lightTheme();
+        @include base.light-theme();
 
         .filetype {
             color: base.$light-primary-color;
@@ -41,7 +41,7 @@
     }
 
     &.dark {
-        @include base.darkTheme();
+        @include base.dark-theme();
 
         .filetype {
             color: base.$dark-primary-color

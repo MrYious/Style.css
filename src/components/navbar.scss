@@ -2,9 +2,12 @@
 
 .navbar {
     display: flex;
+    position: fixed;
+    width: 100%;
     align-items: center;
     padding: base.$main-padding;
     gap: 25px;
+    box-sizing: border-box;
 
     h1 {
         flex-grow: 1;

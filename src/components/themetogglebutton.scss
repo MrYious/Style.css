@@ -1,24 +1,36 @@
+@use './base';
+
 .toggleButton {
     display: flex;
     padding: .4rem;
+    border: 0;
     border-radius: 5rem;
-    gap: .2rem;
+    width: 5rem;
+    font-size: x-large;
+    cursor: pointer;
 
-    button {
+    span {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        border: 1px solid black;
-        font-size: x-large;
-        cursor: pointer;
     }
+
     &.light {
-        background-color: #c0c0c0;
+        background-color: darken($color: base.$light-bg, $amount: 25%);
+        justify-content: start;
+        span {
+            @include base.light-theme();
+        }
     }
     &.dark {
-        background-color: #c0c0c0;
+        background-color: lighten($color: base.$dark-bg, $amount: 35%);
+
+        justify-content: end;
+        span {
+            @include base.dark-theme();
+        }
     }
 }

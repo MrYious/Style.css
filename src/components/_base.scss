@@ -18,3 +18,53 @@ $dark-primary-color: #E5F143;
     background-color: $dark-bg;
     color: $color;
 }
+
+section {
+    // height: 100vh;
+    padding: 2rem;
+
+    h2 {
+        margin: 0;
+        letter-spacing: 2px;
+        padding: 0 0 10px 0;
+    }
+
+    &.light {
+        h2 {
+            border-bottom: 2px solid $dark-bg;
+        }
+    }
+
+    &.dark {
+        h2 {
+            border-bottom: 2px solid $light-bg;
+        }
+    }
+}
+
+@mixin preview() {
+    div.preview {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    &.light {
+        h2 {
+            border-bottom: 2px solid $dark-bg;
+        }
+
+        div.preview {
+            border: 1px solid $light-primary-color;
+        }
+    }
+
+    &.dark {
+        h2 {
+            border-bottom: 2px solid $light-bg;
+        }
+
+        div.preview {
+            border: 1px solid $dark-primary-color;
+        }
+    }
+}

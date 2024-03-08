@@ -54,7 +54,7 @@ section {
         }
 
         div.preview {
-            border: 1px solid $light-primary-color;
+            border: 1px solid $light-neutral-color;
         }
     }
 
@@ -64,7 +64,7 @@ section {
         }
 
         div.preview {
-            border: 1px solid $dark-primary-color;
+            border: 1px solid darken($color: $dark-neutral-color, $amount: 30%);
         }
     }
 }

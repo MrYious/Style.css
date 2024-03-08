@@ -1,0 +1,157 @@
+@use '../base';
+
+section#input {
+    @include base.preview();
+
+    $font-size: 1rem;
+
+    div.preview {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        box-sizing: border-box;
+
+        input[type="text"] {
+            // width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            font-size: .9rem;
+            padding: .8rem;
+        }
+
+        #group1 {
+            padding: .4rem;
+            box-sizing: border-box;
+
+            label {
+                display: block;
+                font-size: .7rem;
+                cursor: text;
+            }
+
+            input {
+                padding: 2px;
+                border: 0;
+            }
+        }
+
+        #group2 {
+            padding: .4rem;
+            box-sizing: border-box;
+            position: relative;
+
+            label {
+                position:absolute;
+                display: inline;
+                font-size: .8rem;
+                padding: 2px;
+                cursor: text;
+                top: -2px;
+                left: 1rem;
+            }
+        }
+    }
+
+    &.light {
+        input:nth-child(1) {
+            @include base.light-theme();
+            border: 1px solid base.$light-neutral-color;
+
+            &:focus {
+                border: 1px solid base.$light-primary-color;
+            }
+        }
+
+        #group1 {
+            border: 1px solid base.$light-neutral-color;
+
+            input {
+                @include base.light-theme();
+            }
+
+            &:focus-within {
+                border: 1px solid base.$light-primary-color;
+            }
+
+        }
+
+        #group2 {
+            label {
+                @include base.light-theme();
+            }
+
+            input {
+                @include base.light-theme();
+                border: 1px solid base.$light-neutral-color;
+
+                &:focus {
+                    border: 1px solid base.$light-primary-color;
+                }
+            }
+        }
+
+        #group3 {
+            input {
+                @include base.light-theme();
+                border: 1px solid base.$light-neutral-color;
+
+                &:focus {
+                    border: 1px solid base.$light-primary-color;
+                }
+            }
+        }
+    }
+
+    &.dark {
+        input:nth-child(1) {
+            @include base.dark-theme();
+            border: 1px solid base.$dark-neutral-color;
+
+            &:focus {
+                border: 1px solid base.$dark-primary-color;
+            }
+        }
+
+        #group1 {
+            border: 1px solid base.$dark-neutral-color;
+
+            input {
+                @include base.dark-theme();
+            }
+
+            &:focus-within {
+                border: 1px solid base.$dark-primary-color;
+            }
+        }
+
+        #group2 {
+            label {
+                @include base.dark-theme();
+            }
+
+            input {
+                @include base.dark-theme();
+                border: 1px solid base.$dark-neutral-color;
+
+                &:focus {
+                    border: 1px solid base.$dark-primary-color;
+                }
+            }
+
+        }
+
+        #group3 {
+            input {
+                @include base.dark-theme();
+                border: 1px solid base.$dark-neutral-color;
+
+                &:focus {
+                    border: 1px solid base.$dark-primary-color;
+                }
+            }
+        }
+
+    }
+
+}

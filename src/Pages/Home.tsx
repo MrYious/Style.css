@@ -9,20 +9,20 @@ export default function Home() {
   const {theme} = useAppSelector(state => state.theme)
 
   const list = [
-    {id: '#input', name: 'Inputs'},
-    {id: '#accordion', name: 'Accordion'},
-    {id: '#alert', name: 'Alerts'},
-    {id: '#button', name: 'Buttons'},
-    {id: '#card', name: 'Cards'},
-    {id: '#date_time', name: 'Date and Time Picker'},
-    {id: '#form', name: 'Forms'},
-    {id: '#progress', name: 'Progress Bar'},
-    {id: '#modal', name: 'Models'},
-    {id: '#menu', name: 'Dropdown'},
-    {id: '#navigation', name: 'Navigation'},
-    {id: '#tab', name: 'Tabs'},
-    {id: '#table', name: 'Tables'},
-    {id: '#tag_badge', name: 'Tags and Badges '},
+    {id: 'input', name: 'Inputs'},
+    {id: 'accordion', name: 'Accordion'},
+    {id: 'alert', name: 'Alerts'},
+    {id: 'button', name: 'Buttons'},
+    {id: 'card', name: 'Cards'},
+    {id: 'date_time', name: 'Date and Time Picker'},
+    {id: 'form', name: 'Forms'},
+    {id: 'progress', name: 'Progress Bar'},
+    {id: 'modal', name: 'Models'},
+    {id: 'menu', name: 'Dropdown'},
+    {id: 'navigation', name: 'Navigation'},
+    {id: 'tab', name: 'Tabs'},
+    {id: 'table', name: 'Tables'},
+    {id: 'tag_badge', name: 'Tags and Badges '},
   ]
 
   const scrollTo = (id: string) => {
@@ -43,7 +43,7 @@ export default function Home() {
       <main className={theme}>
         <h1>Customized Styles for Components</h1>
         <p>Welcome to our showcase of various components with different customization! We showcase beautiful and functional components crafted for websites. Take a look at our collection below</p>
-        <a href='#' onClick={()=>{scrollTo('collection')}}>
+        <a onClick={()=>{scrollTo('collection')}}>
           <FaAnglesDown />
         </a>
       </main>
@@ -52,7 +52,7 @@ export default function Home() {
           <ul>
             {
               list.map(link =>
-                <li key={link.id}><a href={link.id}>{link.name}</a></li>
+                <li key={link.id}><a onClick={()=>{scrollTo(link.id)}}>{link.name}</a></li>
               )
             }
           </ul>

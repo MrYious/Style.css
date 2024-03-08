@@ -29,6 +29,14 @@ section {
         padding: 0 0 10px 0;
     }
 
+    h3 {
+        letter-spacing: 1px;
+    }
+
+    h4 {
+        letter-spacing: 0.5px;
+    }
+
     &.light {
         h2 {
             border-bottom: 2px solid $dark-bg;

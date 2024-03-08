@@ -2,6 +2,7 @@ import './home.scss'
 
 import Component from '../components/content/Component';
 import { FaAnglesDown } from "react-icons/fa6";
+import Input from '../components/content/Input';
 import { useAppSelector } from '../hooks/useReduxHooks'
 
 export default function Home() {
@@ -9,28 +10,40 @@ export default function Home() {
 
   const list = [
     {id: '#input', name: 'Inputs'},
-    {id: '#button', name: 'Buttons'},
-    {id: '#alert', name: 'Alerts'},
-    {id: '#card', name: 'Cards'},
-    {id: '#navigation', name: 'Navigation'},
-    {id: '#form', name: 'Forms'},
-    {id: '#modal', name: 'Models'},
-    {id: '#tab', name: 'Tabs'},
     {id: '#accordion', name: 'Accordion'},
-    {id: '#table', name: 'Tables'},
+    {id: '#alert', name: 'Alerts'},
+    {id: '#button', name: 'Buttons'},
+    {id: '#card', name: 'Cards'},
     {id: '#date_time', name: 'Date and Time Picker'},
-    {id: '#menu', name: 'Dropdown'},
-    {id: '#tag_badge', name: 'Tags and Badges '},
-    {id: '#footer', name: 'Footer'},
+    {id: '#form', name: 'Forms'},
     {id: '#progress', name: 'Progress Bar'},
+    {id: '#modal', name: 'Models'},
+    {id: '#menu', name: 'Dropdown'},
+    {id: '#navigation', name: 'Navigation'},
+    {id: '#tab', name: 'Tabs'},
+    {id: '#table', name: 'Tables'},
+    {id: '#tag_badge', name: 'Tags and Badges '},
   ]
+
+  const scrollTo = (id: string) => {
+    const section = document.getElementById(id);
+    const offset = 50;
+    if(section){
+      const sectionPosition = section.offsetTop - offset;
+
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 
   return (
     <>
       <main className={theme}>
         <h1>Customized Styles for Components</h1>
         <p>Welcome to our showcase of various components with different customization! We showcase beautiful and functional components crafted for websites. Take a look at our collection below</p>
-        <a href='#collection'>
+        <a href='#' onClick={()=>{scrollTo('collection')}}>
           <FaAnglesDown />
         </a>
       </main>
@@ -45,6 +58,7 @@ export default function Home() {
           </ul>
         </aside>
         <div>
+          <Input />
           <Component />
           <Component />
         </div>

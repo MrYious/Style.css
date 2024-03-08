@@ -43,16 +43,16 @@ export default function Home() {
       <main className={theme}>
         <h1>Customized Styles for Components</h1>
         <p>Welcome to our showcase of various components with different customization! We showcase beautiful and functional components crafted for websites. Take a look at our collection below</p>
-        <a onClick={()=>{scrollTo('collection')}}>
+        <button onClick={()=>{scrollTo('collection')}}>
           <FaAnglesDown />
-        </a>
+        </button>
       </main>
       <div id='collection' className={theme}>
         <aside>
           <ul>
             {
               list.map(link =>
-                <li key={link.id}><a onClick={()=>{scrollTo(link.id)}}>{link.name}</a></li>
+                <li key={link.id}><button onClick={()=>{scrollTo(link.id)}}>{link.name}</button></li>
               )
             }
           </ul>

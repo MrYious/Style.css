@@ -19,7 +19,7 @@ main {
         font-size: 1.5rem;
     }
 
-    a {
+    button {
         display: flex;
         justify-items: center;
         align-items: center;
@@ -40,7 +40,7 @@ main {
             color: darken($color: base.$light-primary-color, $amount: 15%);
         }
 
-        a {
+        button {
             background-color: base.$light-primary-color;
             color: base.$light-bg;
             border-color: base.$light-primary-color;
@@ -58,7 +58,7 @@ main {
             color: base.$dark-primary-color;
         }
 
-        a {
+        button {
             background-color: base.$dark-primary-color;
             color: base.$dark-bg;
             border-color: base.$dark-primary-color;
@@ -90,11 +90,12 @@ div#collection {
             padding: 0;
         }
 
-        a {
+        button {
             display: block;
-            text-decoration: none;
-            padding: .2rem 1rem;
+            padding: .3rem 1rem;
             cursor: pointer;
+            border: 0;
+            background-color: transparent;
         }
     }
 
@@ -108,7 +109,7 @@ div#collection {
 
         aside {
 
-            a {
+            button {
                 color: base.$light-neutral-color;
                 border-left: 4px solid darken(base.$light-bg, $amount: 10%);
 
@@ -124,7 +125,7 @@ div#collection {
 
         aside {
 
-            a {
+            button {
                 color: base.$dark-neutral-color;
                 border-left: 4px solid lighten(base.$dark-bg, $amount: 20%);
 

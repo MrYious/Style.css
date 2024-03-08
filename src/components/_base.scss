@@ -45,7 +45,7 @@ section {
 @mixin preview() {
     div.preview {
         padding: 1rem;
-        border-radius: 15px;
+        border-radius: 10px;
     }
 
     &.light {

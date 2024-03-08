@@ -8,7 +8,7 @@ export default function ComponentTemplate() {
 
     return (
         <section id="sampleID" className={theme}>
-            <h2>This is a sample Title</h2>
+            <h2>This is a Sample Title</h2>
             <p>
                 Sample Description
             </p>
@@ -18,7 +18,12 @@ export default function ComponentTemplate() {
             <div className="preview">
                 sample
             </div>
-            <div></div>
+            <p>
+                Sample Description
+            </p>
+            <div className="preview">
+                sample
+            </div>
         </section>
     )
 }

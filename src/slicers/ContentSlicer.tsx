@@ -10,7 +10,7 @@ const initialState: Content = {
 }
 
 const ContentSlicer = createSlice({
-    name: 'theme',
+    name: 'content',
     initialState,
     reducers: {
         // Actions

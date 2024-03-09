@@ -1,6 +1,6 @@
 @use '../components/base';
 
-main {
+main#home {
     padding: base.$main-padding;
     height: 100vh;
     display: flex;

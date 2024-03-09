@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      <main className={theme}>
+      <main className={theme} id='home'>
         <h1>Customized Styles for Components</h1>
         <p>Welcome to our showcase of various components with different customization! We showcase beautiful and functional components crafted for websites. Take a look at our collection below</p>
         <button onClick={()=>{scrollTo('collection')}}>
